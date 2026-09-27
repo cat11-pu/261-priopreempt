@@ -33,7 +33,7 @@ check("close returns a state", () => {
 });
 
 check("render counts events", () => {
-  assert.strictEqual(typeof render(base).count, "number");
+  assert.strictEqual(typeof render(base).slices_first, "number");
 });
 
 console.log("5 cases, " + failed + " failed");

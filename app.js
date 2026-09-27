@@ -1,5 +1,4 @@
 // app.js：渲染结果
-import { push, pick } from "./readyq.js";
 import { step, close } from "./schedrun.js";
 
 export function render(spec) {
@@ -33,6 +32,5 @@ export function render(spec) {
            mid_differs: fingerprint(r2.state) !== fingerprint(first.state),
            closed_equal: fingerprint(closedTwo.state) === fingerprint(closed.state),
            replay_new: replay.slices, judged: first.judged, judged_bound: first.judged_bound,
-           full_diff: fingerprint(closed.state) === fingerprint(fullClosed.state) ? 0 : 1,
-           count: events.length, tail: pick([]) + push([], []).length };
+           full_diff: fingerprint(closed.state) === fingerprint(fullClosed.state) ? 0 : 1 };
 }
